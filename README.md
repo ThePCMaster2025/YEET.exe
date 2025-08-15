@@ -1,10 +1,10 @@
-Malware is not a toy
-
-your computer might die
+Malware is not a toy.
+Your computer might die
 
 # Instructions
 ## Installing .NET SDK
-Simply go to dotnet.microsoft.com then click download                                                                               There select .NET SDK
+Simply go to dotnet.microsoft.com then click download.
+There, select .NET SDK
 ## Downloading the malware
 Simply download YEET.exe or YEET.bat and MBRLocker.exe
 ## Running the malware
