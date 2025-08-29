@@ -9,3 +9,5 @@ There, select .NET SDK
 Simply download YEET.exe or YEET.bat and MBRLocker.exe
 ## Running the malware
 Put YEET.\[extension\] and MBRLocker.exe on the desktop                                                                             then run YEET.\[extension\] as admin
+
+Actually I haven't compiled the malware YET so stay safe :)
