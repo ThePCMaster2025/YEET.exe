@@ -3,6 +3,6 @@ Your computer might die
 
 # Instructions
 ## Downloading the malware
-Simply download YEET.exe or YEET.bat
+Simply download YEET.exe
 ## Running the malware
-Put YEET.\[extension\] on the desktop                                                                             then run YEET.\[extension\] as admin
+Put YEET.exe on the desktop                                                                                          then run YEET.exe as admin
