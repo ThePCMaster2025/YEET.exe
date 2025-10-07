@@ -1,5 +1,5 @@
 Malware is not a toy.
-Your computer might die
+Your computer might die becouse of one simple malware
 
 # Instructions
 ## Downloading the malware
